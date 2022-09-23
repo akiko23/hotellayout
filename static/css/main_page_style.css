@@ -141,7 +141,7 @@ a{
 .btn::before{
     position: absolute;
     content: '';
-    left: -2px;
+    left: -1px;
     top: 0;
     height: 101%;
     width: 0;
@@ -150,7 +150,7 @@ a{
 }
 
 .btn:hover::before{
-    width: 102%;
+    width: 101%;
 }
 
 .btn__item__link{
@@ -233,6 +233,20 @@ a{
         margin-right: 3vh;
         overflow: hidden;
         animation: move_down 1.4s ease forwards;
+    }
+
+    .btn {
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .btn:hover::before{
+        width: 100.5%;
+    }
+    .btn::before{
+        top: 0;
+        left: 0;
+        height: 102%;
     }
 
     .closed__menu{
