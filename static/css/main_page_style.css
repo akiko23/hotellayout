@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+root{
+    --softwhite: #eee
+}
+.top-section {
+    background-image: url("https://static.wixstatic.com/media/05e3dc_875e59fd2b77402297c54466ccee4b58.jpg/v1/fill/w_1919,h_620,al_c,q_85,enc_auto/05e3dc_875e59fd2b77402297c54466ccee4b58.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    background-position: top;
+    width: 100%;
+    height: 80%;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 100px 0;
+}
+.nav > ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav__item > a{
+    border: none;
+    overflow-x: visible;
+    display: inline-block;
+    flex-wrap: nowrap;
+    width: 100%;
+    color: #eee;
+    text-decoration: none;
+    flex: 1;
+    transition: color .2s ease-in-out;
+}
+
+.nav__item {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 0 1.6em 0 1.6em;
+    flex-basis: 33%;
+}
+
+.nav__item__link::before{
+    position: absolute;
+    margin: auto;
+    content: '';
+    display: none;
+    border-radius: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 4px;
+    background-color: coral;
+    animation: extension .6s ease forwards;
+}
+
+@keyframes extension {
+    0%{width: 0; left: 50%; right: 50%}
+    100%{width: 100%; left: 0; right: 0}
+}
+
+.nav__item__link:hover {
+    color: coral;
+}
+
+.nav__item__link:hover::before {
+    display: inline;
+}
+
+.nav__item__link {
+    position: relative;
+    text-transform: uppercase;
+    color: #eee;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.25em;
+}
+
+.header_logo_title{
+    font-weight: 500;
+    font-size: 20px;
+    color: #eee;
+}
+
+.long__link::before {
+    position: absolute;
+    margin: auto;
+    content: '';
+    display: none;
+    border-radius: 0;
+    bottom: -11px;
+    width: 100%;
+    height: 3px;
+    background-color: coral;
+    animation: extension .6s ease forwards;
+}
+
+.header__logo_block{
+    display: inline-block;
+    position: relative;
+}
+
+.line {
+    width: 10%;
+    height: 3px;
+    background-color: #eee;
+}
+
+a{
+    display: inline;!important;
+}
+
+.header_logo_text {
+    text-align: center;
+    position: relative;
+    justify-content: space-around;
+    line-height: 30px;
+    align-items: center;
+    display: flex;
+}
+
+.btn {
+    cursor: pointer;
+    position: relative;
+    border: 4px solid #eee;
+    margin-left: 2em;
+    padding: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.btn::before{
+    position: absolute;
+    content: '';
+    left: -2px;
+    top: 0;
+    height: 101%;
+    width: 0;
+    background: linear-gradient(20deg, mediumspringgreen, deepskyblue);
+    transition: width 0.8s ease-in-out;
+}
+
+.btn:hover::before{
+    width: 102%;
+}
+
+.btn__item__link{
+    position: relative;
+    text-transform: uppercase;
+    color: #eee;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.25em;
+    transition: all .4s ease-in-out;
+}
+
+.middle__content{
+    background-image: url("https://i.pinimg.com/originals/80/50/e1/8050e13f1236e94dae432f055efb850f.jpg");
+    top: 116%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 95%;
+}
+.text_white{
+    color: #eee;
+}
+
+.middle__content_title{
+    display: inline-block;
+    margin-top: 5%;
+    font-size: 23px;
+    position: relative;
+}
+.after_line{
+    display: block;
+    margin: 2vh auto;
+    width: 35px;
+    height: 3px;
+    background-color: #eee;
+}
+
+.open__menu_icon{
+    display: none;
+}
+
+.opened__menu
+{
+    display: none;
+}
+
+@keyframes move_down {
+    from{height: 0;}
+    to{height: 350px;}
+}
+
+@media screen and (max-width: 1200px){
+    .open__menu_icon{
+        position: relative;
+        cursor: pointer;
+        max-width: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s ease-in-out;
+    }
+
+    .opened__menu{
+        margin-top: 45px;
+        display: block!important;
+        position: absolute!important;
+        top: 0!important;
+        right: 0!important;
+    }
+
+    nav{
+        transition: all .5s ease-in-out;
+        margin-right: 3vh;
+        overflow: hidden;
+        animation: move_down 1.4s ease forwards;
+    }
+
+    .closed__menu{
+        display: none;
+        transition: all .5s ease-in-out;
+    }
+
+    .nav__item, .bron__btn{
+        display: block;
+        margin-top: 20px;
+        text-align: end;
+        margin-right: 0;
+        list-style: none;
+    }
+
+    .nav__item > a{
+        width: auto;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .header{
+        padding: 3vh;
+        display: block;
+    }
+}
+
+#first-line{
+    transform: translateY(-150%);
+}
+
+#second-line{
+    transform: translateY(150%);
+}
+
+.black-line{
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    left: -3vh;
+    background-color: black;
+    margin-top: 4px;
+}
+
+.open__menu_icon_block{
+    position: absolute;
+    top: 10vh;
+    width: 5vh;
+    height: 3vh;
+    right: 0;
+}
+
+@keyframes makeafirstcrossline {
+    from{transform: translateY(-150%);}
+    to{
+        transform: rotate(45deg);
+        background-color: black
+    }
+}
+
+@keyframes makeasecondcrossline {
+    from{transform: translateY(150%);}
+    to{
+        transform: rotate(-45deg);
+        background-color: black
+    }
+}
+
+@keyframes makeafirstbackline {
+    from{transform: rotate(45deg)}
+    to{transform: translateY(-150%); background-color: black}
+}
+
+@keyframes makeasecondbackline {
+    from{transform: rotate(-45deg)}
+    to{transform: translateY(150%); background-color: black}
+}
